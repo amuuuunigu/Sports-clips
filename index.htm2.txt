@@ -1,0 +1,36 @@
+<title>Sports Clips Marketplace</title> <style> /* Reset some default styles */ * { box-sizing: border-box; margin: 0; padding: 0; }body { font-family: 'Montserrat', sans-serif; background-color: #e0f7fa; color: #333; line-height: 1.6; }
+
+header { background-color: #0277bd; padding: 30px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+
+header h1 { color: #ffffff; font-size: 2.5em; margin-bottom: 10px; }
+
+#search { width: 80%; max-width: 600px; padding: 15px; margin: 20px auto; display: block; font-size: 1.2em; border: 2px solid #0288d1; border-radius: 30px; outline: none; transition: all 0.3s ease; }
+
+#search:focus { border-color: #00bcd4; box-shadow: 0 0 8px rgba(0, 188, 212, 0.3); }
+
+.clips { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px; }
+
+.clip { background-color: #ffffff; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 260px; max-width: 90%; padding: 15px; transition: transform 0.2s, box-shadow 0.2s; }
+
+.clip:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.2); }
+
+.clip video { width: 100%; border-radius: 10px; }
+
+.clip p { margin-top: 10px; font-weight: 600; font-size: 1.1em; text-align: center; color: #333; }
+
+.buy-button { display: block; width: 100%; padding: 12px; margin-top: 15px; background-color: #009688; border: none; border-radius: 25px; color: #fff; font-weight: 600; font-size: 1em; cursor: pointer; transition: background-color 0.3s; }
+
+.buy-button:hover { background-color: #00796b; }
+
+/* Footer style */ footer { text-align: center; padding: 20px; background-color: #0277bd; color: #fff; margin-top: 40px; } </style>
+
+Sports Clips Marketplace
+Buy clips for just 5¢ each!
+Basketball Dunk
+
+Buy for 5¢
+Soccer Goal
+
+Buy for 5¢
+
+<script> function filterClips() { const input = document.getElementById('search').value.toLowerCase(); const clips = document.querySelectorAll('.clip'); clips.forEach(clip => { const title = clip.dataset.title.toLowerCase(); if (title.includes(input)) { clip.style.display = ''; } else { clip.style.display = 'none'; } }); } function buyClip(title) { alert('Purchased: ' + title + '. (Payment processing to be implemented)'); } </script> © 2025 Sports Clips Marketplace. All rights reserved.
